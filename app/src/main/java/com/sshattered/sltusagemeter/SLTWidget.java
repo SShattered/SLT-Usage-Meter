@@ -26,7 +26,7 @@ public class SLTWidget extends AppWidgetProvider {
     static private PendingIntent getPenIntent(Context context) {
         Intent intent = new Intent(context, SLTWidget.class);
         intent.setAction(REFRESH_ACTION);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
 
